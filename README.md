@@ -37,7 +37,10 @@ locate *.nse
 locate *.nse | grep "smb"
 
 ```
-![image](https://user-images.githubusercontent.com/63270579/230146113-f238042a-c534-42fb-b4f2-687c741e7658.png)
+
+
+![image](https://user-images.githubusercontent.com/63270579/230146227-e6c3af45-1cea-46ee-9b30-0687eca73855.png)
+
 
 
 
