@@ -24,6 +24,12 @@ Pero podemos llevar la busqueda a mas con un filtro como este que hice
 
 ![image](https://user-images.githubusercontent.com/63270579/230143806-39c278dc-e79c-4754-8a7f-67e9577b81a1.png)
 
+Para encontrar que exploits se pueden usar para ***PRIV ESC***
+
+```
+run post/multi/recon/local_exploit_suggester
+```
+
 ### Encontrar scripts nmap SMB
 
 Vamos a buscarlos recordamos que los scripts tienen la extencion .nse
