@@ -24,7 +24,7 @@ Pero podemos llevar la busqueda a mas con un filtro como este que hice
 
 ![image](https://user-images.githubusercontent.com/63270579/230143806-39c278dc-e79c-4754-8a7f-67e9577b81a1.png)
 
-### Encontrar scripts nmap
+### Encontrar scripts nmap SMB
 
 Vamos a buscarlos recordamos que los scripts tienen la extencion .nse
 
@@ -37,6 +37,7 @@ locate *.nse
 locate *.nse | grep "smb"
 
 ```
+![image](https://user-images.githubusercontent.com/63270579/230146113-f238042a-c534-42fb-b4f2-687c741e7658.png)
 
 
 
