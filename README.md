@@ -155,7 +155,9 @@ Nota: UAC (de forma predeterminada) no se aplica a la cuenta de administrador lo
 
  Ctrl+Shift+Esc es un shortcut para el taskmng en windows.
  
+ ## There's difference between encoding and encrypting.
  
+ Let's say you have an encrypted file, the only way to decrypt it is using key. While encoded data can be decoded immediately, without keys. It's NOT a form of encryption, it just a way of representing data.
 
 
 
