@@ -243,7 +243,15 @@ steghide extract -sf <FILE_NAME> # Nos pide el password use el de la imagen de a
 cat a.txt | xclip -sel clip
 ```
 
+## HYDRA
 
+Para usar Hydra tienes que recordar el -l es para cuando tienes un string y mayuscula es cuando quieres buscar en una lista
+
+```
+hydra -L worlist.txt -P wordlist IP ftp
+hydra -L worlist.txt -P wordlist IP ssh
+
+```
 
 
 
