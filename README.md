@@ -174,7 +174,14 @@ Y si tu tienes un archivo con extenciones no importa
 ffuf -w /opt/SecLists/Discovery/Web-Content/masa0.txt -w /opt/SecLists/Discovery/Web-Content/web-extensions.txt:MASA -u http://10.10.175.65/island/2100/FUZZMASA -fc 400 -t 1 -v -x http://127.0.0.1:8080/ 
 ```
 
+## WFUZZ
 
+Para hacer fuzzing con dos listas diferentes se usa el FUZ2Z como en el siguente ejemplo:
+
+```
+wfuzz -c --hc=404 -t 400 -w /opt/SecLists/Discovery/Web-Content/masa0.txt  -w /opt/SecLists/Discovery/Web-Conten│.log
+t/masa1.txt http://10.10.175.65/island/2100/FUZZ.FUZ2Z
+```
 
 
 
