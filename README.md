@@ -77,7 +77,7 @@ locate *.nse | grep "smb"
 
 ## Windows  
 
-### File system 
+### File system NTFS
 
 The file system used in modern versions of Windows is the New Technology File System or simply NTFS. Before NTFS, there was FAT16/FAT32 (File Allocation Table) and HPFS (High Performance File System). 
 
@@ -92,6 +92,13 @@ NTFS addresses many of the limitations of the previous file systems; such as:
     Folder and file compression
     
     Encryption (Encryption File System or EFS)
+    
+### Another feature of NTFS is Alternate Data Streams (ADS).
+
+Every file has at least one data stream ($DATA), and ADS allows files to contain more than one stream of data. Natively Window Explorer doesn't display ADS to the user. There are 3rd party executables that can be used to view this data, but Powershell gives you the ability to view ADS for files.
+
+From a security perspective, malware writers have used ADS to hide data. 1
+
 
 ### lsass
 
@@ -102,18 +109,53 @@ The lsass service, the service responsible for authentication within Windows.
 The printer spool service happens to meet our needs perfectly for this and it'll restart if we crash it! What's the name of the printer service?
 
 
+### La herramienta lusrmgr.msc para ver usuarios y grupos
 
+Sirve para ver usuarios y grupos y se ejecuta con windows ejecutar...
 
+![image](https://user-images.githubusercontent.com/63270579/230254629-0d0d7d4f-cc8b-4277-85e1-87455723147f.png)
 
+Pero existen otras herramientas que permiten lo mismo desde la consola.
 
+### net user
 
+Para ver la informacion de un usuario (osea se tiene que tener el nombre del usuario):
 
+```
+net user tryhackmebilly
+```
 
+![image](https://user-images.githubusercontent.com/63270579/230254835-7253e274-2c0d-4369-a80d-06992b49fa29.png)
 
+Para solo ver los usuarios de ese equipo:
 
+```
+net user
 
+```
 
+Para ver a que grupos pertenece el usuario con el que estas logueado:
 
+```
+whoami /groups
+
+```
+
+##  User Account Control (UAC)
+
+Es una proteccion para evitar ejecutar con privilegios todo el tiempo todo
+
+> La gran mayoría de los usuarios domésticos inician sesión en sus sistemas Windows como administradores locales. Recuerde de la tarea anterior que cualquier usuario con administrador como tipo de cuenta puede realizar cambios en el sistema.
+
+Un usuario no necesita ejecutar con privilegios altos (elevados) en el sistema para ejecutar tareas que no requieren dichos privilegios, como navegar por Internet, trabajar en un documento de Word, etc. Este privilegio elevado aumenta el riesgo de que el sistema compromiso porque facilita que el malware infecte el sistema. En consecuencia, dado que la cuenta de usuario puede realizar cambios en el sistema, el malware se ejecutaría en el contexto del usuario que inició sesión.
+
+Para proteger al usuario local con dichos privilegios, Microsoft introdujo el Control de cuentas de usuario (UAC). Este concepto se introdujo por primera vez con Windows Vista de corta duración y continuó con las versiones de Windows que siguieron.
+
+Nota: UAC (de forma predeterminada) no se aplica a la cuenta de administrador local integrada.
+
+ Ctrl+Shift+Esc es un shortcut para el taskmng en windows.
+ 
+ 
 
 
 
