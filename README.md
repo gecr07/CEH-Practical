@@ -160,8 +160,19 @@ Nota: UAC (de forma predeterminada) no se aplica a la cuenta de administrador lo
  Let's say you have an encrypted file, the only way to decrypt it is using key. While encoded data can be decoded immediately, without keys. It's NOT a form of encryption, it just a way of representing data.
 
 
+## FFUF 
 
+Estos son como fuzzear con 2 listas para encontrar archivos.
 
+```
+ffuf -w /opt/SecLists/Discovery/Web-Content/masa0.txt -w /opt/SecLists/Discovery/Web-Content/masa1.txt:MASA -u http://10.10.67.136/island/2100/FUZZ.MASA -fc 400 -t 1 -v -x http://127.0.0.1:8080/
+```
+
+Y si tu tienes un archivo con extenciones no importa
+
+```
+ffuf -w /opt/SecLists/Discovery/Web-Content/masa0.txt -w /opt/SecLists/Discovery/Web-Content/web-extensions.txt:MASA -u http://10.10.175.65/island/2100/FUZZMASA -fc 400 -t 1 -v -x http://127.0.0.1:8080/ 
+```
 
 
 
