@@ -164,8 +164,9 @@ Nota: UAC (de forma predeterminada) no se aplica a la cuenta de administrador lo
  
  Let's say you have an encrypted file, the only way to decrypt it is using key. While encoded data can be decoded immediately, without keys. It's NOT a form of encryption, it just a way of representing data.
 
+## Lian_Yu (Tryhackme)
 
-## FFUF 
+### FFUF 
 
 Estos son como fuzzear con 2 listas para encontrar archivos.
 
@@ -179,7 +180,7 @@ Y si tu tienes un archivo con extenciones no importa
 ffuf -w /opt/SecLists/Discovery/Web-Content/masa0.txt -w /opt/SecLists/Discovery/Web-Content/web-extensions.txt:MASA -u http://10.10.175.65/island/2100/FUZZMASA -fc 400 -t 1 -v -x http://127.0.0.1:8080/ 
 ```
 
-## WFUZZ
+### WFUZZ
 
 Para hacer fuzzing con dos listas diferentes se usa el FUZ2Z como en el siguente ejemplo:
 
@@ -188,11 +189,53 @@ wfuzz -c --hc=404 -t 400 -w /opt/SecLists/Discovery/Web-Content/masa0.txt  -w /o
 t/masa1.txt http://10.10.175.65/island/2100/FUZZ.FUZ2Z
 ```
 
+### CyberChef
 
 
+Cuando no sepas en que esta encodeado algo pues usa el magic pero a veces eso no funciona usa el filtro y pon From y pues ve probando ejemplo:
 
+![image](https://user-images.githubusercontent.com/63270579/230499176-b967041d-d3e0-4fbd-8e9b-4f1d6a66acf4.png)
 
+Siempre piensa posibles usuarios validos que vayas encontrando ademas lee los comentarios de las paginas web que vayas encontrando.
 
+## FTP
+
+Para conectarte a un ftp simplemente usa:
+
+```
+ftp IP
+> te pide el user y pass
+> pass
+#Ya dentro 
+dir
+help 
+get #para bajar archivos
+ls -la #
+mget * # BAJA TODOS LOS ARCHIVOS EN DICHA CARPETA
+```
+Siempre revisa que no existan archivos ocultos (.file) antes de irte.
+
+## Firmas de archivos conocidos 
+
+> https://en.wikipedia.org/wiki/List_of_file_signatures
+
+Tenemos el caso de una .png que no se puede abrir si vemos con file tampoco reconoce el archivo entonces podemos ver la firma con el editor hex
+
+### hexeditor
+
+editamos los primeros bytes para que se pueda abrir
+
+![image](https://user-images.githubusercontent.com/63270579/230500823-81038c40-e59c-42be-9a96-88c33e00653e.png)
+
+Despues de esto si se puede abrir nos da un password
+
+## steghide 
+
+Y a sabes herramienta para stenografia. ***We can’t use steghide tool on png files only jpg/jpeg files.***
+
+```
+steghide extract -sf <FILE_NAME> # Nos pide el password use el de la imagen de antes!
+```
 
 
 
