@@ -237,7 +237,11 @@ Y a sabes herramienta para stenografia. ***We can’t use steghide tool on png f
 steghide extract -sf <FILE_NAME> # Nos pide el password use el de la imagen de antes!
 ```
 
+## xclip
 
+```
+cat a.txt | xclip -sel clip
+```
 
 
 
