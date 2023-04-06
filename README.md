@@ -133,6 +133,11 @@ Para solo ver los usuarios de ese equipo:
 net user
 
 ```
+## Solo usuarios locales
+
+Cuando ejecutas el comando "net user" en una máquina que está unida a un dominio de Active Directory, el resultado mostrará solo los usuarios locales en la máquina y no los usuarios del dominio.
+
+Para ver una lista de todos los usuarios de un dominio de Active Directory, debes usar el comando "dsquery user" o "dsget user". Estos comandos te permiten buscar y obtener información sobre usuarios y objetos en el directorio de Active Directory.
 
 Para ver a que grupos pertenece el usuario con el que estas logueado:
 
