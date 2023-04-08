@@ -333,12 +333,20 @@ chmod g+s /bin/bash
 Le estas diciendo que se ejecute con los permisos del grupo. A por cierto existe una variable de entorno $LIST
 
 
+## Bibliografias 
+
+/dev/tcp
+
+> https://securityreliks.wordpress.com/2010/08/20/devtcp-as-a-weapon/
+
+_wget 
+
+> https://andreafortuna.org/2021/03/06/some-useful-tips-about-dev-tcp/
 
 
+File Trasfer
 
-
-
-
+> https://www.hackingarticles.in/file-transfer-cheatsheet-windows-and-linux/
 
 
 
