@@ -307,14 +307,30 @@ Siempre que tengas trafico que se pueda ver en texto claro usa las funciones de 
 ![image](https://user-images.githubusercontent.com/63270579/230734324-9328c4f0-3154-4d09-a4d9-ffea886beb83.png)
 
 
+### pspy32s
+
+Es lo mejor para ver que procesos se ejecutan como root de aqui salio la escalacion.
+
+#### SUID /bin/bash
 
 
+Para darle permisos SUID 
+```
+chmod +s /bin/bash
+```
+Es igual a 
 
+```
+chmod u+s /bin/bash
+```
 
+Porque le dices que se ejecute con los permisos del usuario.
 
+```
+chmod g+s /bin/bash
+```
 
-
-
+Le estas diciendo que se ejecute con los permisos del grupo. A por cierto existe una variable de entorno $LIST
 
 
 
