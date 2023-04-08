@@ -296,8 +296,15 @@ En tu maquina atacante (por lo regular tu Kali)
 nc -l 4444 > test.txt
 ```
 
+#### Wireshark
 
+Siempre utiliza los filtros en la barra por ejemplo http o tcp:
 
+![image](https://user-images.githubusercontent.com/63270579/230734081-196dd999-64d2-4896-a540-21af7beb5248.png)
+
+Siempre que tengas trafico que se pueda ver en texto claro usa las funciones de Follow in HTTP o TCP para que te muestren texto claro
+
+![image](https://user-images.githubusercontent.com/63270579/230734324-9328c4f0-3154-4d09-a4d9-ffea886beb83.png)
 
 
 
