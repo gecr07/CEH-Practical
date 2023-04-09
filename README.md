@@ -333,6 +333,31 @@ chmod g+s /bin/bash
 Le estas diciendo que se ejecute con los permisos del grupo. A por cierto existe una variable de entorno $LIST
 
 
+## Crack the hash (TryHackMe)
+
+## Jonh The Ripper
+
+Lo que se tiene que hacer el identificar que tipo de hash es en este caso es uno facil md5 despues solo especificar la lista y el hash siempre usa la opcion -n en echo
+
+```
+john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+
+```
+
+Si muestra el hash crackeado pero si no usa show.
+
+```
+john --format=raw-md5 --show hash.txt
+```
+
+Para ver los formatos que acepta john ( aunque estoy confundido )
+
+```
+
+```
+
+
+
 ## Bibliografias 
 
 /dev/tcp
