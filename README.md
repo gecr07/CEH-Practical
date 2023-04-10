@@ -367,6 +367,9 @@ hydra -L /opt/SecLists/Usernames/top-usernames-shortlist.txt -P /opt/SecLists/Pa
 
 Para enumerar los posibles shares que existan en SMB
 
+![image](https://user-images.githubusercontent.com/63270579/230946426-568bea8f-0d71-4b58-9acd-f81341024991.png)
+
+
 ```
 nmap --script=smb-enum* -p445,139 10.10.25.155
 
