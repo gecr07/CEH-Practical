@@ -363,6 +363,26 @@ hydra -L /opt/SecLists/Usernames/top-usernames-shortlist.txt -P /opt/SecLists/Pa
 
 ```
 
+### SMB enumeration 
+
+Para enumerar los posibles shares que existan en SMB
+
+```
+nmap --script=smb-enum* -p445,139 10.10.25.155
+
+```
+
+### smbclient 
+
+Para conectarte a los recursos compartidos que encontraste
+
+![image](https://user-images.githubusercontent.com/63270579/230944882-fd168e47-9ec3-40c4-aea2-d8463a3bb538.png)
+
+```
+smbclient //10.10.25.155/anonymous
+```
+
+
 ## Bibliografias 
 
 /dev/tcp
