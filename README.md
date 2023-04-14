@@ -489,6 +489,28 @@ Ya despues ese hash que sale jonh lo detecta automatico
 ```
 john pass_hash.txt /usr/share/wordlists/rockyou.txt 
 ```
+## WPSCAN
+
+![image](https://user-images.githubusercontent.com/63270579/231893014-5f516f37-2822-40da-9956-b9bdcaea8a21.png)
+
+### Enumerar Usuarios de WordPress
+
+```
+wpscan --url blog.thm --enumerate u 
+```
+
+### Fuerza Bruta desde wpscan
+
+## IBAN 
+
+Los números IBAN (International Bank Account Number) son un estándar internacional utilizado para identificar de manera única una cuenta bancaria en una transacción internacional. El IBAN consta de un código de país, un número de verificación y un número de cuenta bancaria, que juntos proporcionan toda la información necesaria para dirigir una transferencia bancaria a una cuenta específica. El IBAN es utilizado principalmente en Europa, pero también se ha adoptado en muchos otros países de todo el mundo
+
+## PosBIN ( alternativa a BurptSuite Pro)
+
+Permite hacer dnslookup para por ejemplo ver si hay una ejecucion de comandos.
+
+> https://www.toptal.com/developers/postbin/
+
 
 
 ## Bibliografias 
