@@ -501,6 +501,22 @@ wpscan --url blog.thm --enumerate u
 
 ### Fuerza Bruta desde wpscan
 
+```
+wpscan — url blog.thm -P /usr/share/wordlists/rockyou.txt -U “kwheel”
+
+```
+
+
+## TTY Shell
+
+spawn a TTY shell using python.
+
+```
+python -c 'import pty; pty.spawn("/bin/sh")'
+```
+
+
+
 ## IBAN 
 
 Los números IBAN (International Bank Account Number) son un estándar internacional utilizado para identificar de manera única una cuenta bancaria en una transacción internacional. El IBAN consta de un código de país, un número de verificación y un número de cuenta bancaria, que juntos proporcionan toda la información necesaria para dirigir una transferencia bancaria a una cuenta específica. El IBAN es utilizado principalmente en Europa, pero también se ha adoptado en muchos otros países de todo el mundo
@@ -529,7 +545,9 @@ File Trasfer
 > https://www.hackingarticles.in/file-transfer-cheatsheet-windows-and-linux/
 
 
+SUID script identifier
 
+> https://github.com/Anon-Exploiter/SUID3NUM
 
 
 
