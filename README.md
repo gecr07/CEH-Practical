@@ -294,7 +294,7 @@ Siempre revisa que no existan archivos ocultos (.file) antes de irte.
 
 Tenemos el caso de una .png que no se puede abrir si vemos con file tampoco reconoce el archivo entonces podemos ver la firma con el editor hex
 
-### hexeditor
+### hexeditor ( usa el -n para que no muestre ese color molesto)
 
 editamos los primeros bytes para que se pueda abrir
 
