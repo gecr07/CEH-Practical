@@ -151,7 +151,19 @@ whoami /groups
 
 > Adds, displays, or modifies local groups. Used without parameters, net localgroup displays the name of the server and the names of local groups on the computer.
 
+Para saber por ejemplo que usuarios pertenecen al grupo local Administrators
 
+```
+net localgroup Administrators
+```
+
+![image](https://github.com/gecr07/CEH-Practical/assets/63270579/5fcb3024-77a0-4889-a3e6-a7e23bd86c10)
+
+Para agregar un usuario a un grupo y despues checar que este
+
+```
+net localgroup Administrators Test_user /Add
+```
 
 
 ##  User Account Control (UAC)
