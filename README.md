@@ -563,6 +563,27 @@ Permite hacer dnslookup para por ejemplo ver si hay una ejecucion de comandos.
 
 ![image](https://github.com/gecr07/CEH-Practical/assets/63270579/1db47017-c2c7-4fb5-a55a-fdfe0b9e015f)
 
+## Android Hacking
+
+Para que esto funcione en el mundo real tienes que tener acceso fisico al portal despues activar la depuracion usb despues aceptar el certificado que va a permitir ( al parecer ) que solo se pueda conectar esa computadora por via remota aceptar todo. A y tienes que tener instalado el ADB en la pc atacante.
+
+Los comando para minipular el android via remota son:
+
+```
+apt-get update
+sudo apt-get install adb -y
+adb devices -l
+
+# Connection Establish Steps
+adb connect 192.168.0.4:5555
+adb devices -l
+adb shell  
+
+# Download a File from Android using ADB tool
+adb pull /sdcard/log.txt C:\Users\admin\Desktop\log.txt 
+adb pull sdcard/log.txt /home/mmurphy/Desktop
+
+```
 
 
 ## Bibliografias 
