@@ -336,15 +336,7 @@ steghide extract -sf <FILE_NAME> # Nos pide el password use el de la imagen de a
 cat a.txt | xclip -sel clip
 ```
 
-### HYDRA
 
-Para usar Hydra tienes que recordar el -l es para cuando tienes un string y mayuscula es cuando quieres buscar en una lista
-
-```
-hydra -L worlist.txt -P wordlist IP ftp
-hydra -L worlist.txt -P wordlist IP ssh
-
-```
 
 ## Startup (TryHackMe)
 
@@ -460,6 +452,18 @@ hydra -L /opt/SecLists/Usernames/top-usernames-shortlist.txt -P /opt/SecLists/Pa
 sudo hydra -l jan -P /usr/share/wordlists/rockyou.txt -t 64 -f  ssh://10.10.25.155
 ```
 
+Para usar Hydra tienes que recordar el -l es para cuando tienes un string y mayuscula es cuando quieres buscar en una lista
+
+```
+hydra -L worlist.txt -P wordlist IP ftp
+hydra -L worlist.txt -P wordlist IP ssh
+
+# If the service isn't running on the default port, use -s
+
+ hydra -L userlist.txt -P passlist.txt ftp://192.168.0.100 -s 221
+ 
+```
+
 ### SMB enumeration 
 
 Para enumerar los posibles shares que existan en SMB
@@ -509,6 +513,13 @@ Ya despues ese hash que sale jonh lo detecta automatico
 ```
 john pass_hash.txt /usr/share/wordlists/rockyou.txt 
 ```
+
+## WebScanner Skipfish
+
+```
+skipfish -o Direccion_Donde_guardar_el_output http://192.168.1.202/wordpress
+```
+
 ## WPSCAN
 
 ![image](https://user-images.githubusercontent.com/63270579/231893014-5f516f37-2822-40da-9956-b9bdcaea8a21.png)
