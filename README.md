@@ -6,6 +6,15 @@
 
 ![image](https://user-images.githubusercontent.com/63270579/230136974-19ace88f-f73c-428c-bdf6-1bc2b4419637.png)
 
+```
+netdiscover -r 192.168.0.1/24 
+```
+```
+nmap -sn  192.168.0.1/24
+
+```
+
+
 ### Metasploit SMB
 
 Para iniciar metasploit 
