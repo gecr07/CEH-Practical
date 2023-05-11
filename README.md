@@ -174,6 +174,23 @@ Para agregar un usuario a un grupo y despues checar que este
 net localgroup Administrators Test_user /Add
 ```
 
+## Shares 
+
+Para enumerar los recursos compartidos desde windows....
+
+```
+net view  <IP>
+
+```
+Conectarse a los shares
+
+```
+net use
+net use \\10.10.10.1\e ""\user:""
+net use \\10.10.10.1\e ""/user:""
+```
+
+
 
 ##  User Account Control (UAC)
 
@@ -523,10 +540,18 @@ Ya despues ese hash que sale jonh lo detecta automatico
 john pass_hash.txt /usr/share/wordlists/rockyou.txt 
 ```
 
-## WebScanner Skipfish
+## WebScanner
+
+### Skipfish
 
 ```
 skipfish -o Direccion_Donde_guardar_el_output http://192.168.1.202/wordpress
+```
+
+### Nikto
+
+```
+nikto -h www.example.com tuning 1
 ```
 
 ## WPSCAN
