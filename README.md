@@ -555,6 +555,16 @@ Permite hacer dnslookup para por ejemplo ver si hay una ejecucion de comandos.
  ?>
 ```
 
+## nslookup
+
+![image](https://github.com/gecr07/CEH-Practical/assets/63270579/85ca5021-3f78-445f-ae80-046754718f74)
+
+![image](https://github.com/gecr07/CEH-Practical/assets/63270579/38a94d8d-0b01-4ff2-85f9-8349a6f7c1b5)
+
+![image](https://github.com/gecr07/CEH-Practical/assets/63270579/1db47017-c2c7-4fb5-a55a-fdfe0b9e015f)
+
+
+
 ## Bibliografias 
 
 /dev/tcp
