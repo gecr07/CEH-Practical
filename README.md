@@ -139,12 +139,20 @@ Cuando ejecutas el comando "net user" en una máquina que está unida a un domin
 
 Para ver una lista de todos los usuarios de un dominio de Active Directory, debes usar el comando "dsquery user" o "dsget user". Estos comandos te permiten buscar y obtener información sobre usuarios y objetos en el directorio de Active Directory.
 
+## Groups
+
 Para ver a que grupos pertenece el usuario con el que estas logueado:
 
 ```
 whoami /groups
 
 ```
+## net localgroup
+
+> Adds, displays, or modifies local groups. Used without parameters, net localgroup displays the name of the server and the names of local groups on the computer.
+
+
+
 
 ##  User Account Control (UAC)
 
