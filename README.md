@@ -1,5 +1,4 @@
-# CEH-Practical
-
+# Notes for pentest
 ## Reconnasiance/Footprinting
 
 ### netdiscover (ARP)
