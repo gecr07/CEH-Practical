@@ -416,6 +416,15 @@ Siempre que tengas trafico que se pueda ver en texto claro usa las funciones de 
 
 ![image](https://user-images.githubusercontent.com/63270579/230734324-9328c4f0-3154-4d09-a4d9-ffea886beb83.png)
 
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/71423a47-b79d-4183-a866-74506c0621b6)
+
+
+### Algunos filtros
+
+```
+tcp.flags.syn==1
+```
+
 
 ### pspy32s
 
@@ -737,6 +746,40 @@ nmap -sV --script nbstat.nse IP
 
 Para que se entienda la diferencia ahi esta graficamente.
 
+## Steganography
+
+Es esconder informacion ya sea por imagenes o mp3 o otros archivos.
+
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/37f53e8b-b3ec-416b-9937-59da05de8b57)
+
+### SNOW (windows pero tambien esta en kali )
+
+
+Entiendo que es una herramienta de stegano que esconde mensajes en espacios en blanco. Para Kali es el paquete "stegnow" si no esta
+instalado:
+
+```
+sudo apt install stegsnow
+```
+
+Para esconder:
+
+```
+-C Es para comprimir los datos si los oculta, o para descomprimirlos mientras los extrae.
+
+-p Es para una contraseña para ocultar y extraer.
+
+input.txt El archivo en el que desea ocultar el mensaje.
+
+salida.txt El archivo en el que desea la salida.
+SNOW.EXE -C -p passwd -m "Soy el mesage secreto" input.txt output.txt
+```
+Para extraer el mensaje secreto entonces:
+
+```
+SNOW.EXE -C -p passwd output.txt
+```
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/e489fd54-54e0-411d-8864-1448bab050c9)
 
 
 
