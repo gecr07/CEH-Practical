@@ -495,10 +495,12 @@ Para enumerar los posibles shares que existan en SMB
 
 ![image](https://user-images.githubusercontent.com/63270579/230946426-568bea8f-0d71-4b58-9acd-f81341024991.png)
 
+### NMAP
 
 ```
 nmap --script=smb-enum* -p445,139 10.10.25.155
-
+nmap --script smb-enum-users IP
+nmap -p 445 --script snm-enum-users --script-args smbusername=administrator,smbpassword=smbserver IP
 ```
 
 ### smbclient 
@@ -519,6 +521,8 @@ Enum4linux es una herramienta de enumeración de información de sistemas basado
 
 enum4linux -e [Target_Machine_IP]
 ```
+
+
 
 ## SSH
 
@@ -672,6 +676,30 @@ Usalo para buscar cosas por ejemplo servidores ftp expuestos etc..
 ```
 
 https://www.exploit-db.com/google-hacking-database
+```
+## SNMP Enum ( Protocolo simple de administración de red)
+
+Para enumerar este protocolo encontre una tool que se llama:
+
+```
+snmp-cheack IP
+```
+algo que tienes que tener en cuenta es que SNMP usa puertos de UDP. mira esto:
+
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/ec49e283-d7c5-484f-bf30-63faf81db7de)
+
+Un truco bueno es ver los scripts que nmap tiene para esto en google escribe "nsedocs" y en la pestaña de scripts vienen los que son para snmp ahi por ejemplo podrias buscar el que se usa para enumerar procesos es cuestiond e buscarle... Por ejemplo:
+
+```
+nmap -sU -p 161 --script=snmp-processes IP
+```
+
+Con metasploit ya sabes busca:
+
+```
+msfconsole
+search snmp
+use auxiliary/scanner/snmp/snmp_login
 ```
 
 
