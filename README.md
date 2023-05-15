@@ -711,6 +711,34 @@ Con metasploit existe un modulo que sirve para esto:
 ```
 auxiliary/scanner/rdp/rdp_scanner
 ```
+Con hydra se puede hacer brute force a casi lo que sea.
+
+```
+hydra -L wordlist -P wordlist rdp://IP -s diferent_port
+```
+Para conectarte al rdp desde la consola puedes usar:
+
+```
+xfreerdp /u:administrator /p:passwd /v:IP:port_if_it_changes_and_its_not3389
+```
+
+## NetBios Enum
+
+Con nmap se puede enumerar
+
+```
+nmap -sV --script nbstat.nse IP
+```
+
+
+## DDOS vs DOS
+
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/0e420421-c05b-433f-adc0-ad1fcb724311)
+
+Para que se entienda la diferencia ahi esta graficamente.
+
+
+
 
 ## Bibliografias 
 
