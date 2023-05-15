@@ -418,6 +418,13 @@ Siempre que tengas trafico que se pueda ver en texto claro usa las funciones de 
 
 ![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/71423a47-b79d-4183-a866-74506c0621b6)
 
+### Conversations
+
+Para ver las conversaciones de TCP y numero de paquetes etc
+
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/0682096b-4dea-408a-b99f-8a6e4b7e8175)
+
+
 
 ### Algunos filtros
 
@@ -781,6 +788,21 @@ SNOW.EXE -C -p passwd output.txt
 ```
 ![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/e489fd54-54e0-411d-8864-1448bab050c9)
 
+### OpenStego
+
+Esta tool sirve para esconder por ejemplo un txt en una imagen ( cover file) puedes usar password o no para asegurarla no le veo sentifo poner mas..
+
+### convert_tcp
+
+Esta tool entiendo que oculta la informacion en el espacio que queda libre de las cabeceras de TCP. En conclucion funciona como un cliente servidor es como si tuvieras una shell reversa pero shell normal dejo los comandos.
+
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/3d2c8d1b-0fa8-4a75-88fa-7925fa56cbcc)
+
+para compilar ya sabes
+
+```
+gcc file.c -o out_file
+```
 
 
 ## Bibliografias 
