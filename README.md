@@ -665,6 +665,15 @@ Y finalmente pues usamos el DUMP
 `sqlmap -r req.txt -p username -D blood -T flag --dump 
 ```
 
+## Google Dorks
+
+Usalo para buscar cosas por ejemplo servidores ftp expuestos etc..
+
+```
+
+https://www.exploit-db.com/google-hacking-database
+```
+
 
 ## Bibliografias 
 
@@ -686,8 +695,21 @@ SUID script identifier
 
 > https://github.com/Anon-Exploiter/SUID3NUM
 
+SMB CheetSheet
 
+> https://0xdf.gitlab.io/2018/12/02/pwk-notes-smb-enumeration-checklist-update1.html
 
+Revisa los enlaces del final tiene de todo
+
+> https://github.com/CyberSecurityUP/Guide-CEH-Practical-Master
+
+Pentesting notes igual muy bueno checalo si necesitas por ejemplo ver lo del netbios
+
+> https://book.thegurusec.com/certifications/certified-ethical-hacker-practical
+
+Ceh notes
+
+> https://github.com/infovault-Ytube/CEH-Practical-Notes/blob/main/README.md
 
 
 
