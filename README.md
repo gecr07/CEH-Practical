@@ -585,6 +585,9 @@ python -c 'import pty; pty.spawn("/bin/sh")'
 
 Los números IBAN (International Bank Account Number) son un estándar internacional utilizado para identificar de manera única una cuenta bancaria en una transacción internacional. El IBAN consta de un código de país, un número de verificación y un número de cuenta bancaria, que juntos proporcionan toda la información necesaria para dirigir una transferencia bancaria a una cuenta específica. El IBAN es utilizado principalmente en Europa, pero también se ha adoptado en muchos otros países de todo el mundo
 
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/a5b61eac-b96c-4521-ba79-68c5c062a713)
+
+
 ## PosBIN ( alternativa a BurptSuite Pro)
 
 Permite hacer dnslookup para por ejemplo ver si hay una ejecucion de comandos.
