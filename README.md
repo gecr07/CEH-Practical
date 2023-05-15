@@ -501,6 +501,8 @@ Para enumerar los posibles shares que existan en SMB
 nmap --script=smb-enum* -p445,139 10.10.25.155
 nmap --script smb-enum-users IP
 nmap -p 445 --script snm-enum-users --script-args smbusername=administrator,smbpassword=smbserver IP
+nmap -p 445 --script snm-enum-groups --script-args smbusername=administrator,smbpassword=smbserver IP
+nmap -p 445 --script snm-enum-services --script-args smbusername=administrator,smbpassword=smbserver IP
 ```
 
 ### smbclient 
@@ -702,6 +704,13 @@ search snmp
 use auxiliary/scanner/snmp/snmp_login
 ```
 
+## RDP (3389)
+
+Con metasploit existe un modulo que sirve para esto:
+
+```
+auxiliary/scanner/rdp/rdp_scanner
+```
 
 ## Bibliografias 
 
