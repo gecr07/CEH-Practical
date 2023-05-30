@@ -803,6 +803,40 @@ para compilar ya sabes
 ```
 gcc file.c -o out_file
 ```
+## Crack WPA2 from .cap
+
+Primero para esta prueba vamos a capturar los paquetes.
+
+```
+iwconfig # Para ver las tarjetas conectadas
+
+```
+## Aircrack 
+
+Paso uno poner en modo monitor la tarjeta
+
+```
+airmon-ng check kill
+airmon-ng start wlan0
+
+```
+
+## Captura de paquetes
+
+```
+airodump-ng -i wlan0mon
+```
+
+> https://medium.com/hacking-info-sec/c%C3%B3mo-capturar-y-desencriptar-tr%C3%A1fico-en-wifi-wpa-wpa2-5fad004a5ea3
+
+> https://hashcat.net/wiki/doku.php?id=cracking_wpawpa2
+
+
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/267266d2-5dfc-4f1f-83b8-6f1a5bf96250)
+
+
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/bc9ae5a7-1caf-45f6-9884-5c80a0cb55b5)
+
 
 
 ## Bibliografias 
