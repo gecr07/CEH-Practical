@@ -831,6 +831,15 @@ airodump-ng -i wlan0mon
 
 > https://hashcat.net/wiki/doku.php?id=cracking_wpawpa2
 
+## Captura del Handshake
+
+```
+aireplay-ng -0 10 -a <bssid> --ignore-negative-one <interfaz>
+
+```
+
+
+
 
 ![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/267266d2-5dfc-4f1f-83b8-6f1a5bf96250)
 
