@@ -866,6 +866,7 @@ cxpcapngtool wifiCapture-01.cap -o /home/user1/wifiHashes.txt
 ````
 ## Hashcat
 
+Como nota se puede usar el modo 22000 solo en versiones mayores a hashcat 
 ```
  .\hashcat.exe -m 22000 -w 3 .\toCrack\wifiHashes.txt .\passwordLists\hashkiller-dict.txt
 ```
