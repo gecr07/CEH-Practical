@@ -862,6 +862,8 @@ hcxtools.
 
 > https://node-security.com/posts/cracking-wpa2-with-hashcat/
 
+> https://hashcat.net/cap2hashcat/
+
 ```
 hcxpcapngtool wifiCapture-01.cap -o /home/user1/wifiHashes.txt
 
