@@ -916,6 +916,12 @@ sudo apt install bat
 
 ![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/c6d01bf0-9b86-4051-98b1-9ef74b8fb81b)
 
+Para montar un directorio compartido desde la consola
+
+```
+sudo mount -t cifs -o username=root,password=toor  //192.168.0.29/Ejemplo /mnt/Windows/
+```
+
 
 ## Bibliografias 
 
