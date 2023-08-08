@@ -949,6 +949,10 @@ Pentesting notes igual muy bueno checalo si necesitas por ejemplo ver lo del net
 
 > https://book.thegurusec.com/certifications/certified-ethical-hacker-practical
 
+SMB cheet sheet
+
+> https://github.com/irgoncalves/smbclient_cheatsheet
+
 Ceh notes
 
 > https://github.com/infovault-Ytube/CEH-Practical-Notes/blob/main/README.md
