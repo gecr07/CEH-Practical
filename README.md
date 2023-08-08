@@ -964,7 +964,9 @@ Ceh notes
 > https://github.com/infovault-Ytube/CEH-Practical-Notes/blob/main/README.md
 
 
+Metasploit sheetcheat
 
+> https://www.comparitech.com/net-admin/metasploit-cheat-sheet/
 
 
 
