@@ -920,6 +920,7 @@ Para montar un directorio compartido desde la consola
 
 ```
 sudo mount -t cifs -o username=root,password=toor  //192.168.0.29/Ejemplo /mnt/Windows/
+sudo umount /mnt/Windows
 ```
 
 
