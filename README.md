@@ -913,8 +913,15 @@ sudo apt install bat
 ![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/ea8c60e7-ab59-4fbd-bfd7-313715b16bc8)
 
 ![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/eda9096a-38cd-463d-9211-03973f3179b3)
-
+## SMBCLIENT
 ![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/c6d01bf0-9b86-4051-98b1-9ef74b8fb81b)
+
+```
+smbclient -L //192.168.0.29/Ejemplo -U root%toor
+# Para conectarte como una shell
+smbclient  //192.168.0.29/Ejemplo -U root%toor
+```
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/be3e7295-f442-4502-b62e-b2c29d73398e)
 
 Para montar un directorio compartido desde la consola
 
