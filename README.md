@@ -949,6 +949,14 @@ ping -c 1 127.0.0.1;id
 ping -c 1 127.0.0.1| id
 ```
 
+## SED
+
+> El comando sed es una herramienta de línea de comandos en sistemas Unix y Unix-like que se utiliza para procesar y transformar texto. La opción -i es una de las opciones más comunes en sed y se utiliza para realizar ediciones in situ en archivos. "In situ" significa que las modificaciones se realizan directamente en el archivo original, en lugar de generar una salida modificada en la consola.
+
+
+```
+sed -i 'expresión' archivo
+```
 
 ## Bibliografias 
 
