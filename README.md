@@ -999,7 +999,9 @@ DVWA
 
 > https://n3dx0o.medium.com/dvwa-command-execution-solutions-low-medium-high-6ee354dc2974
 
+OPENVPN Connection error
 
+> https://tryhackme.com/forum/thread/62bb0daf19e588005b7b1739
 
 
 
