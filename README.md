@@ -634,6 +634,9 @@ Permite hacer dnslookup para por ejemplo ver si hay una ejecucion de comandos.
 
 ## Android Hacking
 
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/7180f2e9-fb0a-4868-8286-b26e0e2103a8)
+
+
 Para que esto funcione en el mundo real tienes que tener acceso fisico al portal despues activar la depuracion usb despues aceptar el certificado que va a permitir ( al parecer ) que solo se pueda conectar esa computadora por via remota aceptar todo. A y tienes que tener instalado el ADB en la pc atacante.
 
 Los comando para minipular el android via remota son:
