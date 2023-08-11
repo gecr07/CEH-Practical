@@ -958,6 +958,18 @@ ping -c 1 127.0.0.1| id
 sed -i 'expresión' archivo
 ```
 
+## Entropy in a file
+
+Se puede sacar este valor con el comando
+
+```
+sudo apt install ent
+ent file
+```
+
+![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/58d83fb7-5263-4319-944f-5291c4e91a6f)
+
+
 ## Bibliografias 
 
 /dev/tcp
