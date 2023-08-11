@@ -972,6 +972,22 @@ ent file
 
 ![image](https://github.com/gecr07/Pentest-Exercices/assets/63270579/58d83fb7-5263-4319-944f-5291c4e91a6f)
 
+## Directirio /media
+
+> En sistemas Linux, el directorio /media se utiliza generalmente como punto de montaje temporal para dispositivos extraíbles, como unidades USB, discos duros externos, CD/DVD, tarjetas SD y otros medios de almacenamiento. Cuando conectas un dispositivo extraíble a tu sistema, el sistema operativo monta automáticamente el dispositivo en un subdirectorio dentro de /media.
+
+
+## Encontrar archivos con permisos SUID
+
+```
+find / -perm -4000 2>/dev/null
+```
+
+## Comando ltrace (ltrace ejecutableelf)
+
+> El comando ltrace es una herramienta de diagnóstico en sistemas Unix y Linux que se utiliza para rastrear y mostrar las llamadas a funciones de bibliotecas compartidas realizadas por un programa en ejecución. Es especialmente útil para analizar y depurar programas que están utilizando bibliotecas compartidas para realizar operaciones y funciones específicas.
+
+> Cuando ejecutas un programa con ltrace, este captura y muestra en tiempo real las llamadas a funciones que el programa realiza en las bibliotecas compartidas. Esto puede proporcionar información valiosa sobre cómo se está comportando el programa y qué funciones de biblioteca se están utilizando. Esto puede ser útil para identificar cuellos de botella, problemas de rendimiento o errores en programas.
 
 ## Bibliografias 
 
