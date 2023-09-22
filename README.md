@@ -988,6 +988,16 @@ find / -perm -4000 2>/dev/null
 > El comando ltrace es una herramienta de diagnóstico en sistemas Unix y Linux que se utiliza para rastrear y mostrar las llamadas a funciones de bibliotecas compartidas realizadas por un programa en ejecución. Es especialmente útil para analizar y depurar programas que están utilizando bibliotecas compartidas para realizar operaciones y funciones específicas.
 
 > Cuando ejecutas un programa con ltrace, este captura y muestra en tiempo real las llamadas a funciones que el programa realiza en las bibliotecas compartidas. Esto puede proporcionar información valiosa sobre cómo se está comportando el programa y qué funciones de biblioteca se están utilizando. Esto puede ser útil para identificar cuellos de botella, problemas de rendimiento o errores en programas.
+> 
+
+
+## SSLSCAN 
+
+Para poder ejecutar esta tool contra puertos que no son los 443 o el 80 usa
+
+```
+sslscan example.com:465
+```
 
 ## Bibliografias 
 
