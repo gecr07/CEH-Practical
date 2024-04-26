@@ -655,6 +655,12 @@ adb shell
 adb pull /sdcard/log.txt C:\Users\admin\Desktop\log.txt 
 adb pull sdcard/log.txt /home/mmurphy/Desktop
 
+
+## SI tienes varios dispositivos usa -s y el identificador
+
+adb.exe -s ZY322QXNZL shell
+
+
 ```
 ## SQLMAP ( tryhackme )
 
